@@ -4,4 +4,4 @@ Trabalho desenvolvido para a disciplina de Linguagens Formais e Autômatos, mini
 
 Consiste na implementação do AFD:
 
-![AFD](https://github.com/lucasgabriel07/AutomatoFinitoDeterministico/blob/master/AFD.png)
+<img src="AFD.png" alt="drawing" style="width: 500px"/>
