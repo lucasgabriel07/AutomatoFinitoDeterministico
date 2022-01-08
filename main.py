@@ -1,11 +1,11 @@
 class Estado:
 
     def __init__(self, final=False):
-        self.transicoes = {}  # Dicionário com as possíveis transicoes do estado. key = letra; value = próximo estado
+        self.transicoes = {}  # Dicionário com as possíveis transicoes do estado
         self.final = final  # Igual a True se o estado for final
 
-    def adicionar_transicao(self, letra, transicao):
-        self.transicoes[letra] = transicao
+    def adicionar_transicao(self, letra, estado):
+        self.transicoes[letra] = estado
 
     def next(self, letra):
         if letra in self.transicoes:
@@ -40,11 +40,9 @@ if __name__ == '__main__':
     q1.adicionar_transicao('b', q2)
     q2.adicionar_transicao('c', q1)
 
-    while True:
+    string = input('Digite uma palavra: ')
 
-        string = input('Digite uma palavra: ')
-
-        if validar_palavra(q0, string):
-            print('aceita\n')
-        else:
-            print('rejeita\n')
+    if validar_palavra(q0, string):
+        print('aceita')
+    else:
+        print('rejeita')
