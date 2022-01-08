@@ -40,9 +40,9 @@ if __name__ == '__main__':
     q1.adicionar_transicao('b', q2)
     q2.adicionar_transicao('c', q1)
 
-    string = input('Digite uma palavra: ')
+    palavra = input('Digite uma palavra: ')
 
-    if validar_palavra(q0, string):
+    if validar_palavra(q0, palavra):
         print('aceita')
     else:
         print('rejeita')
