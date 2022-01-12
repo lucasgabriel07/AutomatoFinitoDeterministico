@@ -7,7 +7,7 @@ class Estado:
     def adicionar_transicao(self, letra, estado):
         self.transicoes[letra] = estado
 
-    def next(self, letra):
+    def executar_transicao(self, letra):
         if letra in self.transicoes:
             return self.transicoes[letra]
         else:
@@ -18,7 +18,7 @@ def validar_palavra(estado_inicial, palavra):
     estado_atual = estado_inicial
 
     for letra in palavra:
-        estado_atual = estado_atual.next(letra)
+        estado_atual = estado_atual.executar_transicao(letra)
         if estado_atual is None:
             return False
     """ 
